@@ -9,40 +9,89 @@ This guide will demonstrate how to connect to a Azure virtual machine with remot
 <h2>Environments and Technologies Used</h2>
 
 - Microsoft Azure (Virtual Machines/Compute)
-- Remote Desktop
+- Remote Desktop Connection (RDP)
 
 <h2>Operating Systems Used </h2>
 
-- Windows 10</b> (21H2)
+- Windows 10</b> (22H2)
 
 <h2>Prerequisites</h2>
 
-- Create Azure Account (free 200$ credit)
-- Create Virtual Machine (to connect to through RDP)
+- Azure Account
+- Virtual Machine (Azure)
 
 <h2>Setup Walkthrough</h2>
 
 <p>
-<img src="https://i.imgur.com/3yxzrcu.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/TnY6AyL.png" height="80%" width="80%" alt="Azure Account Creation"/>
 </p>
 <p>
-The first thing you need to do is head to <a href="azure.microsoft.com">Azure</a>, and sign up for the free account. 
-</p>
-<br />
-
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+The first thing you need to do is head to https://azure.microsoft.com, and sign up for a free account. Make sure to get your free 200$ of credit usable on the site.
 </p>
 <br />
 
+
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/hKmoYl5.png" height="80%" width="80%" alt="Resource Group Creation"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+After you're signed into the portal, you need to create a Resource Group for the Virtual Machine to sit in. Click on Resource Groups, then create, and name it anything you like. 
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/1u6JXIB.png" height="80%" width="80%" alt="Virtual Machine Creation"/>
+</p>
+<p>
+Now you will make a Virtual Machine, go back to the home portal and click on Virtual Machines, then create and select "Azure virtual machine".
+  Set the resource group to the one you just created, select an appropriate name for the virtual machine, and pick a region where you want it to reside.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/pBtM714.png" height="80%" width="80%" alt="Virtual Machine Config"/>
+</p>
+<p>
+Scroll down and set the image to Windows 10. For the size I recommend anything with 2 vcpus so it's not too slow, whatever is cheapest as long as it has 2 vcpus. (Don't worry about the price, what is listed is only if you are running the machine 24/7)
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/dJlI7W6.png" height="80%" width="80%" alt="Don't miss the license!"/>
+</p>
+<p>
+Continue down the page to make your username and password, and DON'T FORGET to select the easily missable licensing section where you need to confirm you have a Widows 10 license at the bottom.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/yHcnBxc.png" height="80%" width="80%" alt="Create and validate"/>
+</p>
+<p>
+Click review + create and wait for it to validate, create the machine and wait for it to deploy.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/DSLTsiU.png" height="80%" width="80%" alt="Public IP for RDP"/>
+</p>
+<p>
+Once it deploys and is running, it's finally time to connect to it using Remote Desktop. Navigate to the virtual machine and find it's public IP address, copy it and open Remote desktop by searching "rdp" or "remote" in windows search and open up remote desktop connection.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/O6IsXth.png" height="80%" width="80%" alt="Logging into RDP"/>
+</p>
+<p>
+Paste the IP address you just copied and click connect, sign in using the account username and password you chose earlier and you should finally be logged into the virtual machine.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/h5Bziq9.png" height="80%" width="80%" alt="Smile"/>
+</p>
+<p>
+And you're done! This can now be used for whatever needs you require, thank you for reading and I hope this helps. :)
 </p>
 <br />
